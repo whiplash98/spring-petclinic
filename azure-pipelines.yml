@@ -1,4 +1,9 @@
 trigger:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'testarc1998'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 - master
 
 pool:
