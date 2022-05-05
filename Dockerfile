@@ -1,4 +1,3 @@
-RUN apt update -y
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 RUN ./mvnw package
