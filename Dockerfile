@@ -1,3 +1,4 @@
+RUN /bin/sh: ./mvnw
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 RUN cd spring-petclinic
