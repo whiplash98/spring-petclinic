@@ -1,9 +1,4 @@
 trigger:
-- task: Docker@2
-  inputs:
-    containerRegistry: 'testarc1998'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
 - master
 
 pool:
@@ -20,7 +15,7 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '8'
+    jdkVersionOption: 'default'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '\*\*/surefire-reports/TEST-\*.xml'
