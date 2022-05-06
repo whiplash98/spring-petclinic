@@ -1,7 +1,7 @@
 FROM java:8-jdk-alpine
 VOLUME /tmp
 RUN sh -c 'touch spring-petclinic-2.6.0-SNAPSHOT.jar'
-RUN apt update
+RUN /bin/sh -c apt update
 RUN apt install -y default-jre
 RUN apt install openjdk-8-jre-headless
 RUN ./mvnw package
