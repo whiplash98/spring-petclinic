@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
+RUN git clone https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic
 RUN sudo apt install default-jre -Y
 RUN sudo apt install openjdk-8-jre-headless
