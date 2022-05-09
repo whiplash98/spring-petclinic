@@ -5,7 +5,7 @@ RUN apk add curl
 RUN apk add docker
 RUN apk add openjdk8-jre
 RUN apk add maven
-COPY ..
+COPY . .
 RUN ls -la
 RUN ./mvnw package
 COPY /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
