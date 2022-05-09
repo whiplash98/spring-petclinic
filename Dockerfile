@@ -1,7 +1,6 @@
 FROM openjdk:8-jdk-alpine
 RUN apk update
 RUN apk add docker
-RUN apk add maven Package
 COPY . .
 RUN ls -la
 RUN ./mvnw package
