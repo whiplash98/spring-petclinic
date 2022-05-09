@@ -1,6 +1,6 @@
-FROM openjdk:8
+FROM java:8-jdk-alpine
 VOLUME /tmp
-RUN 'sh -c ./mvnw package'
 ADD /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
+RUN 'sh -c ./mvnw package'
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
