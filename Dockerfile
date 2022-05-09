@@ -2,8 +2,7 @@ FROM openjdk:8-jdk-alpine
 RUN apk update
 RUN apk add git
 RUN apk add curl
-RUN apk add --update docker openr
-RUN rc-update add docker boot
+RUN apk add docker
 RUN apk add openjdk8-jre
 RUN apk add maven
 RUN ./mvnw package
