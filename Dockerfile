@@ -1,5 +1,7 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
+ARG JAR_FILE=/target/spring-petclinic-2.6.0-SNAPSHOT.jar
+WORKDIR /target/*
+COPY ${JAR_FILE} app.jar
 RUN 'sh -c ./mvnw package'
 RUN 'sh -c touch /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar'
 EXPOSE 8080
