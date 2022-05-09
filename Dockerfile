@@ -1,6 +1,9 @@
 FROM openjdk:8-jdk-alpine
-WORKDIR /target/*
-RUN 'sh -c ./mvnw package'
-RUN 'sh -c touch /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar'
+RUN apt update -y
+    git clone https://github.com/spring-projects/spring-petclinic.git && cd spring-petclinic
+    apt install default-jre
+    apt install maven
+    ./mvnw package
+COPY /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
