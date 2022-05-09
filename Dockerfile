@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 RUN apk update
 RUN apk add git
 RUN apk add curl
-RUN curl -SSL https://get.docker.com/ | sh
+RUN apk add docker docker-compose
 RUN apk add openjdk8-jre
 RUN apk add maven
 RUN ./mvnw package
