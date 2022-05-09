@@ -1,7 +1,6 @@
 FROM openjdk:8-jdk-alpine
 RUN apt update -y
 RUN apt install git -y
-    git clone https://github.com/spring-projects/spring-petclinic.git 
     cd spring-petclinic
     apt install curl -y
     curl -SSL https://get.docker.com/ | sh
