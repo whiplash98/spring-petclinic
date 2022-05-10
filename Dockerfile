@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
-RUN apk update
-RUN apk add docker
-RUN ls -la
-COPY /target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
+VOLUME /tmp
+RUN sudo apt update -y
+RUN git clone https://github.com/spring-projects/spring-petclinic.git
+RUN cd spring-petclinic
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
