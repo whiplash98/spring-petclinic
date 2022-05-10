@@ -13,7 +13,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: mypythondockerrepo
+      - name: myapprepo
         image: myacrrepo312.azurecr.io/testarc1998/myapprepo:#{Build.BuildId}#
         ports:
         - containerPort: 8080
