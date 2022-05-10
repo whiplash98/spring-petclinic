@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-RUN apt update -y
+RUN apk update -y
 RUN git clone https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic
 EXPOSE 8080
