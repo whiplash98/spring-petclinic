@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic
-        image: myacrrepo312.azurecr.io/testarc1998/spring-petclinic:#{Build.BuildId}#
+        image: myacrrepo312.azurecr.io/testarc1998/whiplash98/spring-petclinic:#{Build.BuildId}#
         ports:
         - containerPort: 8080
 # service type loadbalancer       
