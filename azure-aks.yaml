@@ -15,6 +15,7 @@ spec:
       containers:
       - name: spring-petclinic
         image: testarc1998.azurecr.io/whiplash98/spring-petclinic:#{Build.BuildId}#
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 # service type loadbalancer       
