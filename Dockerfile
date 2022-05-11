@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ADD https://github.com/spring-projects/spring-petclinic.git /tmp/
-CMD ./mvnw package
+CMD /tmp/mvnw package
 RUN cd /tmp/
 RUN ls
 EXPOSE 8080
