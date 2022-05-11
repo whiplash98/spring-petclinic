@@ -1,6 +1,5 @@
-FROM java:8-jdk-alpine
-CMD ./mvnw package
-EXPOSE 8080
-ARG JAR=spring-petclinic-2.6.0-SNAPSHOT.jar
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
 COPY targt/target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
