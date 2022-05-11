@@ -13,8 +13,8 @@ spec:
         app: spring-petclinic
     spec:
       containers:
-      - name: spring-petclinic
-        image: testarc1998:nikhiljadhav678/spring-petclinic:#{Build.BuildId}#
+      - name: petclinic
+        image: testacr1998.azurecr.io/whiplash98/spring-petclinic:#{Build.BuildId}#
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
