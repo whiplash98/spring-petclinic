@@ -3,6 +3,7 @@ CMD apt update -y
 CMD git clone https://github.com/spring-projects/spring-petclinic.git
 CMD cd spring-petclinic
 CMD ./mvnw package
-CMD target/target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} spring-petclinic-2.6.0-SNAPSHOT.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/*.jar"]
+ENTRYPOINT ["java","-jar","/spring-petclinic-2.6.0-SNAPSHOT.jar"]
