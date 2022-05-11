@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk-alpine
 RUN apk update
-WORKDIR /spring-petclinic
-ADD https://github.com/spring-projects/spring-petclinic.git /spring-petclinic
-CMD ./mvnw package
-COPY target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
+WORKDIR /usr/app/
+ADD https://github.com/spring-projects/spring-petclinic.git /usr/app/
+RUN mvnw
+COPY /usr/app/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
