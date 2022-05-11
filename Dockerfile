@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 RUN apk update -y
-RUN git clone https://github.com/spring-projects/spring-petclinic.git
+ADD https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic
 RUN pwd
 RUN ls
