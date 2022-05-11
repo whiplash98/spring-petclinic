@@ -6,4 +6,4 @@ CMD ./mvnw package
 ARG JAR_FILE=target/*.jar
 ADD target/target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/spring-petclinic-2.6.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/*.jar"]
