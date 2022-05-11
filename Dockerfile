@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-RUN apt update -y
+RUN apk update -y
 RUN git clone https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic
 RUN pwd
