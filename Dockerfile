@@ -4,6 +4,8 @@ WORKDIR /usr/app/
 ADD https://github.com/spring-projects/spring-petclinic.git /usr/app/
 CMD cd /usr/app/spring-petclinic/
 CMD ./mvnw package
+RUN cd /usr/app/spring-petclinic
+RUN ls
 COPY target/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/*.jar"]
