@@ -1,9 +1,6 @@
-FROM java:8-jdk-alpine
-RUN apk update
-ADD https://github.com/spring-projects/spring-petclinic.git .
-RUN ls
+FROM openjdk:11.0.1-jre-slim-stretch
 CMD ./mvnw package
-COPY target/spring-petclinic/spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
-#COPY ${JAR_FILE} /spring-petclinic-2.6.0-SNAPSHOT.jar /*.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/*.jar"]
+ARG JAR=spring-petclinic-2.6.0-SNAPSHOT.jar
+COPY target/$JAR /app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
