@@ -1,4 +1,4 @@
-FROM java:11-jdk-alpine
+FROM openjdk:11
 RUN apk update
 WORKDIR /tmp/target/
 ADD https://github.com/spring-projects/spring-petclinic.git /tmp/target/
