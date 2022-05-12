@@ -1,5 +1,5 @@
-FROM java:9-jdk-alpine
-RUN apk update
+FROM openjdk:11
+RUN apt update
 WORKDIR /tmp/target/
 ADD https://github.com/spring-projects/spring-petclinic.git /tmp/target/
 CMD ./mvnw package
