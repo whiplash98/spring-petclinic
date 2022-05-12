@@ -3,6 +3,6 @@ RUN apk update
 WORKDIR /tmp/target/
 ADD https://github.com/spring-projects/spring-petclinic.git /tmp/target/
 CMD ./mvnw package
-ADD target/spring-boot-docker.jar spring-boot-docker.jar /spring-boot-docker.jar
+ADD target/tmp/target/spring-boot-docker.jar spring-boot-docker.jar /spring-boot-docker.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/spring-boot-docker.jar"]
